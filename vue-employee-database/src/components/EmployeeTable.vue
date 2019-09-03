@@ -8,17 +8,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Kim Obasogie</td>
-          <td>k.obasogie@gmail.com</td>
-        </tr>
-        <tr>
-          <td>Julie Pladys</td>
-          <td>j.pladys@gmail.com</td>
-        </tr>
-        <tr>
-          <td>Lynn Brants</td>
-          <td>l.brants@gmail.com</td>
+        <tr v-for="employee in employees" :key="employee.id">
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.email }}</td>
         </tr>
       </tbody>
     </table>
