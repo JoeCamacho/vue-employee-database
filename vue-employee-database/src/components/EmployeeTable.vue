@@ -31,4 +31,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+th {
+  color: #05386b;
+}
+td {
+  color: #379683;
+}
+</style>
