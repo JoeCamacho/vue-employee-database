@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="small-container">
     <h1>Employees</h1>
     <employee-table />
   </div>
@@ -11,6 +11,27 @@ export default {
   name: "app",
   components: {
     EmployeeTable
+  },
+  data() {
+    return {
+      employees: [
+        {
+          id: 1,
+          name: "Kim Obasogie",
+          email: "k.obasogie@gmail.com"
+        },
+        {
+          id: 2,
+          name: "Julie Pladys",
+          email: "j.pladys@gmail.com"
+        },
+        {
+          id: 3,
+          name: "Lynn Brants",
+          email: "l.brants@gmail.com"
+        }
+      ]
+    };
   }
 };
 </script>
