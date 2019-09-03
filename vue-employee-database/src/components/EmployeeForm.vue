@@ -12,7 +12,15 @@
 
 <script>
 export default {
-  name: "employee-form"
+  name: "employee-form",
+  data() {
+    return {
+      employee: {
+        name: "",
+        email: ""
+      }
+    };
+  }
 };
 </script>
 
@@ -27,3 +35,4 @@ button {
   background-color: #379683;
 }
 </style>
+
