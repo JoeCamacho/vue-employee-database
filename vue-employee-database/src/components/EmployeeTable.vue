@@ -25,7 +25,7 @@
           </td>
           <td v-else>
             <button @click="editMode(employee.id)">Edit</button>
-            <button @click="cancelEdit(employee)">Delete</button>
+            <button @click="$emit('delete:employee', employee.id)">Delete</button>
           </td>
         </tr>
       </tbody>
@@ -47,10 +47,6 @@ export default {
   methods: {
     editMode(id) {
       this.editing = id;
-    },
-    cancelEdit(employee) {
-      Object.assign(employee, this.cachedEmployee);
-      this.editing = null;
     },
     editEmployee(employee) {
       if (employee.name === "" || employee.email === "") return;
