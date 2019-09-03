@@ -5,12 +5,17 @@
         <tr>
           <th>Employee name</th>
           <th>Employee email</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="employee in employees" :key="employee.id">
           <td>{{ employee.name }}</td>
           <td>{{ employee.email }}</td>
+          <td>
+            <button>Edit</button>
+            <button>Delete</button>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -32,5 +37,9 @@ th {
 }
 td {
   color: #379683;
+}
+button {
+  margin: 0 0.5rem 0 0;
+  background-color: #379683;
 }
 </style>
